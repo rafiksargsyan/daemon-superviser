@@ -5,11 +5,11 @@ import time
 parser = argparse.ArgumentParser()
 parser.add_argument("PROCESS_NAME", help="The process to supervise")
 parser.add_argument("--restart-wait-time", type=int, default=3,
-                    help="Seconds to wait between attempts to restart process")
+                    help="Seconds to wait between attempts to restart process (default = 3)")
 parser.add_argument("--max-attempts", type=int, default=3,
-                    help="Number of restart attempts before giving up")
+                    help="Number of restart attempts before giving up (default = 3)")
 parser.add_argument("--check-interval", type=int, default=5,
-                    help="Process status check interval")
+                    help="Process status check interval (default = 5)")
 args = parser.parse_args()
 
 process_name = args.PROCESS_NAME
